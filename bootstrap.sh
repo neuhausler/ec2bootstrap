@@ -10,9 +10,9 @@ yum -y install tomcat6-admin-webapps
 yum -y install gcc gcc-c++ make libxslt fop ncurses-devel openssl-devel unixODBC unixODBC-devel
 
 mkdir ~/work
-cd ~/work
 
 # install erlang
+cd ~/work
 wget http://www.erlang.org/download/otp_src_R14B04.tar.gz
 gunzip *.gz
 tar -xf *.tar
@@ -22,12 +22,14 @@ make
 make install
 
 # install couchdb
+cd ~/work
 git clone git://gist.github.com/1522728.git
 cd 1522728
 chmod +x couchdb-ec2-install.sh 
 ./couchdb-ec2-install.sh 
 
 # install rabbitmq
+cd ~/work
 git clone git://gist.github.com/1522766.git
 cd 1522766
 chmod +x rabbitmq-install.sh 
