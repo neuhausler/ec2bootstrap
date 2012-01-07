@@ -23,17 +23,17 @@ make install
 
 # install couchdb
 cd ~/work
-git clone git://gist.github.com/1522728.git
-cd 1522728
-chmod +x couchdb-ec2-install.sh 
-./couchdb-ec2-install.sh 
+git clone git://github.com/neuhausler/ec2couchdb
+cd ec2couchdb
+chmod +x install.sh 
+./install.sh 
 
 # install rabbitmq
 cd ~/work
-git clone git://gist.github.com/1522766.git
-cd 1522766
-chmod +x rabbitmq-install.sh 
-./rabbitmq-install.sh 
+git clone git://github.com/neuhausler/ec2rabbitmq
+cd ec2rabbitmq
+chmod +x install.sh 
+./install.sh 
 
 # add tomcat6 and rabbitmq to auto start, couchdb is already set
 chkconfig --level 345 tomcat6 on
