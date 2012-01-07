@@ -39,4 +39,7 @@ chmod +x install.sh
 chkconfig --level 345 tomcat6 on
 chkconfig --level 345 rabbitmq-server on
 
+# do some cleaning up
+cd ~/work
+rm -rf *
 
