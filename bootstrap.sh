@@ -35,9 +35,18 @@ cd ec2rabbitmq
 chmod +x install.sh 
 ./install.sh 
 
-# add tomcat6 and rabbitmq to auto start, couchdb is already set
+# install cloudrover
+cd ~/work
+git clone git://github.com/neuhausler/cloudrover
+cd cloudrover
+chmod +x install.sh 
+./install.sh 
+
+# add tomcat6, couchdb, rabbitmq, and cloudrover to auto start
 chkconfig --level 345 tomcat6 on
+chkconfig --level 345 couchdb on
 chkconfig --level 345 rabbitmq-server on
+chkconfig --level 345 cloudrover on
 
 # do some cleaning up
 cd ~/work
