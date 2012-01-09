@@ -38,7 +38,7 @@ chmod +x install.sh
 # install cloudrover
 cd ~/work
 git clone git://github.com/neuhausler/ec2cloudrover
-cd cloudrover
+cd ec2cloudrover
 chmod +x install.sh 
 ./install.sh 
 
