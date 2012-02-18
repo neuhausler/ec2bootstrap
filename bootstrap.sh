@@ -42,11 +42,19 @@ cd ec2cloudrover
 chmod +x install.sh 
 ./install.sh 
 
-# add tomcat6, couchdb, rabbitmq, and cloudrover to auto start
+# install cloudproxy
+cd ~/work
+git clone git://github.com/neuhausler/ec2cloudproxy
+cd ec2cloudproxy
+chmod +x install.sh 
+./install.sh 
+
+# add tomcat6, couchdb, rabbitmq, cloudrover, and cloudproxy to auto start
 chkconfig --level 345 tomcat6 on
 chkconfig --level 345 couchdb on
 chkconfig --level 345 rabbitmq-server on
 chkconfig --level 345 cloudrover on
+chkconfig --level 345 cloudproxy on
 
 # do some cleaning up
 cd ~/work
