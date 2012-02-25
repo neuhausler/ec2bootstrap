@@ -28,6 +28,13 @@ cd ec2couchdb
 chmod +x install.sh 
 ./install.sh 
 
+# install riak
+cd ~/work
+git clone git://github.com/neuhausler/ec2riak
+cd ec2riak
+chmod +x install.sh 
+./install.sh 
+
 # install rabbitmq
 cd ~/work
 git clone git://github.com/neuhausler/ec2rabbitmq
@@ -52,6 +59,7 @@ chmod +x install.sh
 # add tomcat6, couchdb, rabbitmq, cloudrover, and cloudproxy to auto start
 chkconfig --level 345 tomcat6 on
 chkconfig --level 345 couchdb on
+chkconfig --level 345 riak on
 chkconfig --level 345 rabbitmq-server on
 chkconfig --level 345 cloudrover on
 chkconfig --level 345 cloudproxy on
