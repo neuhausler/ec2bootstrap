@@ -6,6 +6,9 @@ yum -y install git
 yum -y install *openjdk-devel
 yum -y install tomcat6
 yum -y install tomcat6-admin-webapps
+yum -y install ruby
+yum -y install ruby-devel ruby-docs ruby-ri ruby-rdoc
+yum -y install rubygems
 
 yum -y install gcc gcc-c++ make libxslt fop ncurses-devel openssl-devel unixODBC unixODBC-devel
 
@@ -13,20 +16,13 @@ mkdir ~/work
 
 # install erlang
 cd ~/work
-wget http://www.erlang.org/download/otp_src_R14B04.tar.gz
+wget http://www.erlang.org/download/otp_src_R15B01.tar.gz
 gunzip *.gz
 tar -xf *.tar
-cd otp_src_R14B04
+cd otp_src_R15B01
  ./configure
 make
 make install
-
-# install couchdb
-cd ~/work
-git clone git://github.com/neuhausler/ec2couchdb
-cd ec2couchdb
-chmod +x install.sh 
-./install.sh 
 
 # install riak
 cd ~/work
@@ -34,6 +30,13 @@ git clone git://github.com/neuhausler/ec2riak
 cd ec2riak
 chmod +x install.sh 
 ./install.sh 
+
+# install couchdb
+cd ~/work
+git clone git://github.com/neuhausler/ec2couchdb
+cd ec2couchdb
+chmod +x install.sh
+./install.sh
 
 # install rabbitmq
 cd ~/work
