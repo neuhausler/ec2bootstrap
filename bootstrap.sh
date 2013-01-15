@@ -6,9 +6,10 @@ yum -y install git
 yum -y install *openjdk-devel
 yum -y install tomcat6
 yum -y install tomcat6-admin-webapps
-yum -y install ruby
-yum -y install ruby-devel ruby-docs ruby-ri ruby-rdoc
-yum -y install rubygems
+
+#yum -y install ruby
+#yum -y install ruby-devel ruby-docs ruby-ri ruby-rdoc
+#yum -y install rubygems
 
 yum -y install gcc gcc-c++ make libxslt fop ncurses-devel openssl-devel unixODBC unixODBC-devel
 
